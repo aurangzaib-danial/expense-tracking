@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/margin">
+
+    <TextView
+        android:id="@+id/entry_name"
+        style="@style/Widget.ExpenseTracking.TextView"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Shopping" />
+
+    <TextView
+        android:id="@+id/entry_category_label"
+        style="@style/Widget.ExpenseTracking.TextView"
+        android:layout_width="wrap_content"
+        android:text="Category: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/entry_name" />
+
+    <TextView
+        android:id="@+id/entry_category"
+        style="@style/Widget.ExpenseTracking.TextView"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/entry_category_label"
+        app:layout_constraintTop_toBottomOf="@id/entry_name"
+        tools:text="Personal" />
+
+    <TextView
+        android:id="@+id/entry_date_label"
+        style="@style/Widget.ExpenseTracking.TextView"
+        android:layout_width="wrap_content"
+        android:text="Date: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/entry_category" />
+
+    <TextView
+        android:id="@+id/entry_date"
+        style="@style/Widget.ExpenseTracking.TextView"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/entry_date_label"
+        app:layout_constraintTop_toBottomOf="@id/entry_category"
+        tools:text="20/10/2022" />
+
+    <TextView
+        android:id="@+id/entry_amount_label"
+        style="@style/Widget.ExpenseTracking.TextView"
+        android:layout_width="wrap_content"
+        android:text="Amount: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/entry_date" />
+
+    <TextView
+        android:id="@+id/entry_amount"
+        style="@style/Widget.ExpenseTracking.TextView"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/entry_amount_label"
+        app:layout_constraintTop_toBottomOf="@id/entry_date"
+        tools:text="20" />
+
+    <TextView
+        android:id="@+id/entry_note_label"
+        style="@style/Widget.ExpenseTracking.TextView"
+        android:layout_width="wrap_content"
+        android:text="Note: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/entry_amount" />
+
+    <TextView
+        android:id="@+id/entry_note"
+        style="@style/Widget.ExpenseTracking.TextView"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/entry_note_label"
+        app:layout_constraintTop_toBottomOf="@id/entry_amount"
+        tools:text="This is a note" />
+
+    <Button
+        android:id="@+id/delete_entry"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/entry_note" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_between_elements"
+        android:layout_marginBottom="@dimen/margin_between_elements"
+        android:contentDescription="Edit Entry"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
